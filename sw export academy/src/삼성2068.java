@@ -7,7 +7,7 @@ public class 삼성2068 {
         int[] result = new int[T];
         int[] arr = new int[10];
 
-        for (int i = 0; i<T; i++) {
+        for (int i = 0; i<T; i++) { //최대값 찾기
             int max = 0;
             for (int j = 0; j<10; j++) {
                 arr[j] = sc.nextInt();
@@ -21,5 +21,6 @@ public class 삼성2068 {
         for (int i = 0; i<T; i++) {
             System.out.println("#" + (i+1) + " " + result[i]);
         }
+        sc.close();
     }
 }
