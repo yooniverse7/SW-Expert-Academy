@@ -14,7 +14,7 @@ public class 삼성2071 {
                 arr[j] = sc.nextInt();
                 sum += arr[j];
             }
-            double a = (double) sum / 10.0; //나눗셈을 할 때 double형으로 바꿔서 실수 나눗셈 진행
+            double a = (double) sum / 10.0; //나눗셈을 할 때 double형으로 바꿔서 실수나눗셈 진행
             result[i] = (int) Math.round(a); // 평균을 반올림해서 정수로 변환
         }
 
