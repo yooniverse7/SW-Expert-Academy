@@ -7,7 +7,6 @@ public class 삼성2072 {
         T = sc.nextInt();
         int[][] arr = new int[T][10];
         int[] result = new int[T];
-        
 
         for (int i = 0; i < T; i++) {  // 배열에 추가하기
             for (int j = 0; j<10; j++) {
@@ -30,7 +29,6 @@ public class 삼성2072 {
         for (int i = 0; i < T; i++) { //출력하기
             System.out.println("#"+ (i+1) + " " + result[i]);
         }
-        
         sc.close();
 
 
