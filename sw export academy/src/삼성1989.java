@@ -31,6 +31,7 @@ public class 삼성1989 {
         for(int i = 0; i<T; i++) {
             System.out.println("#" + (i+1) + " " + result[i]);
         }
+        sc.close();
 
     }
 }
