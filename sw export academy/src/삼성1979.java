@@ -5,7 +5,7 @@ public class 삼성1979 {
     public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
-        int[] result = new int[T];
+    
 
         for(int i = 0; i<T; i++) {
             int N = sc.nextInt();
@@ -24,19 +24,19 @@ public class 삼성1979 {
             for(int j = 0; j < N; j++) {
                 int num = 0; //누적되는 블록 개수
                 for(int z = 0; z<N; z++) {
-                    if(arr[j][z] == 1) {
-                        num++;
-                    } else {
-						if(num == K) {
-							sum++;
-						}
+                    if(arr[j][z] == 0) {
+                        if(num == K) {
+                            sum += 1;
+                        }
                         num = 0;
+                    } else {
+                        num++;
                     }
-					if(j== N-1&&num == K) { // 00111일 경우
-						sum++;
-					}
-
                 }
+				if (num == K) {
+                    sum += 1;
+                }
+                
             }
 
             //세로 확인
@@ -45,28 +45,30 @@ public class 삼성1979 {
                 for(int z = 0; z<N; z++) {
                     if(arr[z][j] == 1) { // 블록이 1이면 카운트
 							num++;
-					}
-					else {
+					}else {
 						if(num == K) {
 							sum++;
 						}
 						num = 0;
 					}
-					if(z== N-1&&num == K) {
-							sum++;
-						}
+
 	                }
-    	        }
+                if(num == K) { //위치가 여기에 있어야하는 이유는..??
+                  sum++;
+                    
+                }
+
+    	    }
         	
-			result[i] = sum;
+            System.out.println("#" + (i+1) + " " + sum);    
+			
 		}
 
-        for(int i = 0; i < T; i++) {
-            System.out.println("#" + (i+1) + " "+ result[i]);
-        }
+       
 
         sc.close();
 
 		
     }
 }
+
