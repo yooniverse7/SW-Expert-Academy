@@ -41,17 +41,15 @@ public class 삼성5948 {
             }
 
             int check = 0;
-            int idx5 = 0;
             for(int i = 34; i>=0; i--) { //다섯번째로 큰 숫자 인덱스 찾기
                 if(sumArr[i] !=0) {
                     check++;
                     if(check == 5) {
-                        idx5 = i;
+                        System.out.println("#" + tc + " " + sumArr[i]);
+                        break;
                     }
                 }
             }
-
-            System.out.println("#" + tc + " " + sumArr[idx5]);
 
         }
 
